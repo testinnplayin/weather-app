@@ -1,0 +1,62 @@
+<!-- This is the main page for the local weather app from Free Code Camp -->
+<!-- Author: Rachelle Wood -->
+<!-- Date: Sept, 2016 -->
+
+<!DOCTYPE>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, intial-scale=1" />
+    <title>Local Weather App</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <header class="header text-center">
+        <h1>That Local Weather App</h1>
+      </header>
+    </div>
+    <div class="container-fluid">
+      <div class="main-content">
+        <div class="row">
+          <div class="col-xs-6">
+            <button class="btn btn-default" type="button" id="degrees-c">C</button>
+          </div>
+          <div class="col-xs-6">
+            <button class="btn btn-default" type="button" id="degrees-f">F</button>
+          </div>
+        </div>
+        <div class="information-container">
+          <h2>Today's Weather</h2>
+          <h3>Local temperature:</h3>
+          <p>Temperature</p>
+          <h3>Location:</h3>
+          <p>Location</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <footer class="footer">
+        <div class="row">
+          <div class="col-xs-6">
+            <p>&copy R. Wood, 2016</p>
+          </div>
+          <div>
+            <p>Powered by: <a href="#">X</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+
+</html>
