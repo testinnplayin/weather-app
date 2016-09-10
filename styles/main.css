@@ -38,9 +38,6 @@ h1 {
 /* MAIN-CONTENT STYLES */
 
 .main-content {
-  background: url('http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/stormy_07_23/s01_4321599.jpg')
-  no-repeat center;
-  background-size: cover;
   border: 1px solid white;
   border-radius: 5px;
   height: 800px;
