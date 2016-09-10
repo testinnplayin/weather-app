@@ -19,21 +19,17 @@ $(document).ready(function() {
         var cloud = data.clouds.all;
 
         $('#degrees-c').addClass('active');
-        $('#local-t').after("<p>" + tempC + " &#8451</p>"); //make this into a function
+        $('#local-t').after("<p>" + tempC + " &#8451</p>");
         $('#local-t').next().attr('id', 't');
         $('#t').after("<p>" + cloud + "</p>");
 
         $('#degrees-f').on('click', function(e) {
-          e.preventDefault; //refactor into a function
-          $('#degrees-c').removeClass('active'); //refactoring do $(button).not(this).removeClass('active');
-          $(this).addClass('active');
+          showDeg(e);
           $('#t').empty().html("<p>" + tempF + " &#8457</p>");
         });
 
         $('#degrees-c').on('click', function(e) {
-          e.preventDefault;
-          $('#degrees-f').removeClass('active');
-          $(this).addClass('active');
+          showDeg(e);
           $('#t').empty().html("<p>" + tempC + " &#8451<p>");
         });
 
@@ -41,5 +37,11 @@ $(document).ready(function() {
         $('#local-t').after("<p>" + err + "</p>");
       });
   });
+
+  function showDeg(e) {
+    e.preventDefault;
+    $('button').not(this).removeClass('active');
+    $(this).addClass('active');
+  }
 
 });
