@@ -14,8 +14,8 @@ $(document).ready(function() {
     $('#local').after("<p>Location: " + city + ", " + state + "</p>");
 
     $.getJSON(weatherURL).done(function(data) {
-        var tempC = Math.floor(data.main.temp - 278);
-        var tempF = Math.floor(((data.main.temp - 278) * (9 / 5)) + 32);
+        var tempC = Math.floor(data.main.temp - 273);
+        var tempF = Math.floor(((data.main.temp - 273) * (9 / 5)) + 32);
 
         $('#degrees-c').addClass('active');
         $('#local-t').after("<p>" + tempC + " &#8451</p>"); //make this into a function
