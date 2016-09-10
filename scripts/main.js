@@ -13,6 +13,10 @@ $(document).ready(function() {
 
     $('#local').after("<p>Location: " + city + ", " + state + "</p>");
 
+    getWeather(weatherURL);
+  });
+
+  function getWeather(weatherURL) {
     $.getJSON(weatherURL).done(function(data) {
         var tempC = Math.floor(data.main.temp - 273);
         var tempF = Math.floor(((data.main.temp - 273) * (9 / 5)) + 32);
@@ -36,12 +40,13 @@ $(document).ready(function() {
       }).fail(function(err) {
         $('#local-t').after("<p>" + err + "</p>");
       });
-  });
+  }
 
   function showDeg(e) {
     e.preventDefault;
     $('button').not(this).removeClass('active');
     $(this).addClass('active');
   }
+
 
 });
