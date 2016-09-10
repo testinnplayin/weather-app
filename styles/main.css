@@ -29,6 +29,12 @@ p {
 
 
 
+/* SPECIFIC STYLES */
+
+h1 {
+  margin-bottom: 15px;
+}
+
 /* MAIN-CONTENT STYLES */
 
 .main-content {
