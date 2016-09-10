@@ -24,7 +24,7 @@ $(document).ready(function() {
     $.getJSON(weatherURL).done(function(data) {
         var tempC = Math.floor(data.main.temp - 273);
         var tempF = Math.floor(((data.main.temp - 273) * (9 / 5)) + 32);
-        var cloud = data.clouds.all;
+        var cloud = data.weather[0].description;
         //display temperature in degrees C by default
         $('#local-t').after("<p>" + tempC + " &#8451</p>");
         $('#local-t').next().attr('id', 't');
