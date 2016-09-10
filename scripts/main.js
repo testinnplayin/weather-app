@@ -16,10 +16,12 @@ $(document).ready(function() {
     $.getJSON(weatherURL).done(function(data) {
         var tempC = Math.floor(data.main.temp - 273);
         var tempF = Math.floor(((data.main.temp - 273) * (9 / 5)) + 32);
+        var cloud = data.clouds.all;
 
         $('#degrees-c').addClass('active');
         $('#local-t').after("<p>" + tempC + " &#8451</p>"); //make this into a function
         $('#local-t').next().attr('id', 't');
+        $('#t').after("<p>" + cloud + "</p>");
 
         $('#degrees-f').on('click', function(e) {
           e.preventDefault; //refactor into a function
