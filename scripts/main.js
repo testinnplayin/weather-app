@@ -66,21 +66,23 @@ $(document).ready(function() {
     $('.main-content').css({"background": photo, "background-size": "cover"});
   }
 
-  var stormy = 'http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/stormy_07_23/s01_4321599.jpg';
-  var drizzly = 'http://www.discoverwalks.com/blog/wp-content/uploads/2016/06/rain-in-paris-big.jpg';
-  var rainy = 'http://www.metoffice.gov.uk/media/image/d/n/light_rain.jpg';
-  var snowy = 'https://usodep.blogs.govdelivery.com/files/2014/01/Winter-snow-flakes-winter-22231260-1149-768_large.jpg';
-  var foggy = 'http://dreamatico.com/data_images/fog/fog-2.jpg';
-  var hazy = 'http://www.dyna-nutrition.com/wp-content/uploads/2015/09/Haze-of-independence.jpg';
-  var squally = 'https://icons.wxug.com/data/wximagenew/n/novembergale/1360-800.jpg';
-  var tornadoy = 'http://modernsurvivalblog.com/wp-content/uploads/2013/04/tornado-myths.jpg';
-  var sunny = 'http://feelgrafix.com/data_images/out/15/899342-sunny-day-pictures.jpg';
-  var pCloudy = 'http://www.stockpholio.net/index/view/image/8673702726_8.jpg';
-  var cloudy = 'http://img.wallpaperfolder.com/f/48A3E37380A7/cloudy-day-high-resolution-9aqp.jpg';
-  var danger = 'http://media.istockphoto.com/photos/3d-illustration-of-warning-sign-with-exclamation-mark-picture-id489038680?k=6&m=489038680&s=170667a&w=0&h=zJMLpn7RDt_l8LN2pwzP5LGeAcgG3Lf_BS5E5RgRotM=';
-  var generic = 'http://bernews.com/weather/wp-content/uploads/2013/08/weather-avi-generic-6-sun1.jpg';
+//Dictionary function for assigning photos to specific weather id's (found on OpenWeatherMap's own site)
 
   function getPic (weather) {
+    var stormy = 'http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/stormy_07_23/s01_4321599.jpg';
+    var drizzly = 'http://www.discoverwalks.com/blog/wp-content/uploads/2016/06/rain-in-paris-big.jpg';
+    var rainy = 'http://www.metoffice.gov.uk/media/image/d/n/light_rain.jpg';
+    var snowy = 'https://usodep.blogs.govdelivery.com/files/2014/01/Winter-snow-flakes-winter-22231260-1149-768_large.jpg';
+    var foggy = 'http://dreamatico.com/data_images/fog/fog-2.jpg';
+    var hazy = 'http://www.dyna-nutrition.com/wp-content/uploads/2015/09/Haze-of-independence.jpg';
+    var squally = 'https://icons.wxug.com/data/wximagenew/n/novembergale/1360-800.jpg';
+    var tornadoy = 'http://modernsurvivalblog.com/wp-content/uploads/2013/04/tornado-myths.jpg';
+    var sunny = 'http://feelgrafix.com/data_images/out/15/899342-sunny-day-pictures.jpg';
+    var pCloudy = 'http://www.stockpholio.net/index/view/image/8673702726_8.jpg';
+    var cloudy = 'http://img.wallpaperfolder.com/f/48A3E37380A7/cloudy-day-high-resolution-9aqp.jpg';
+    var danger = 'http://media.istockphoto.com/photos/3d-illustration-of-warning-sign-with-exclamation-mark-picture-id489038680?k=6&m=489038680&s=170667a&w=0&h=zJMLpn7RDt_l8LN2pwzP5LGeAcgG3Lf_BS5E5RgRotM=';
+    var generic = 'http://bernews.com/weather/wp-content/uploads/2013/08/weather-avi-generic-6-sun1.jpg';
+
     var dict = {200: stormy, 201: stormy, 202: stormy, 210: stormy, 211: stormy, 212: stormy, 221: stormy, 230: stormy, 231: stormy,
                 232: stormy, 300: drizzly, 301: drizzly, 302: drizzly, 310: drizzly, 311: drizzly, 312: drizzly, 313: drizzly,
                 314: drizzly, 321: drizzly, 500: rainy, 501: rainy, 502: rainy, 503: rainy, 504: rainy, 511: rainy, 520: rainy,
@@ -90,6 +92,7 @@ $(document).ready(function() {
                 900: danger, 901: danger, 902: danger, 903: danger, 904: danger, 905: danger, 906: danger, 957: danger, 958: danger,
                 959: danger, 960: danger, 961: danger, 962: danger, 1000: generic
               };
+              
       if (dict.hasOwnProperty(weather)) {
         return dict[weather];
       } else {
